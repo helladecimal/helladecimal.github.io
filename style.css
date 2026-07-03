@@ -10,12 +10,19 @@
     src: url(fonts/Agave-Regular.ttf);
 }
 
+@font-face {
+    font-family: Nerd Font;
+    src: url(fonts/SymbolsNerdFontMono-Regular.ttf);
+}
+
 body { background-color: var(--bg);}
+
+.nerd {font-family: Nerd Font;}
 
 .container {
     
     display: grid;
-    grid-template-columns: auto 7.5% 40% auto;
+    grid-template-columns: auto 15% 40% auto;
     grid-template-areas: 
     ". . title ."
     ". side main .";
@@ -24,6 +31,12 @@ body { background-color: var(--bg);}
     padding: 0.5rem;
     column-gap: 10px;
     row-gap: 20px;
+}
+
+.box { 
+    border-top: 5px solid var(--fg);
+    background-color: var(--fg2);
+    padding: 1rem;
 }
 
 .titlebar {
@@ -37,6 +50,8 @@ body { background-color: var(--bg);}
 
 .sidebar {
     grid-area: side;
+    
+    font-size: 1.25vw; 
 }
 
 .main {
@@ -44,7 +59,7 @@ body { background-color: var(--bg);}
     padding: 30px;
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 900px){
     .container {
         grid-template-columns: 100%;
         align-content: center;
@@ -57,6 +72,10 @@ body { background-color: var(--bg);}
     .titlebar {
         font-size: 3vw;
     }
+
+    .sidebar {
+        font-size: 15px;
+    }
 }
 
 .h {
@@ -67,7 +86,7 @@ body { background-color: var(--bg);}
     visibility: hidden;
 }
 
-p, h1, h2, h3, div{
+p, h1, h2, h3, div, a{
     font-family: Krypton;
     font-weight: normal;
     color: var(--text)
@@ -80,12 +99,6 @@ hr {
 
 div {
     font-size: 18px;
-}
-
-.box { 
-    border-top: 5px solid var(--fg);
-    background-color: var(--fg2);
-    padding: 1rem;
 }
 
 .box > img {
