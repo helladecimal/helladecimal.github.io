@@ -25,7 +25,8 @@ body { background-color: var(--bg);}
     grid-template-columns: auto 15% 40% auto;
     grid-template-areas: 
     ". . title ."
-    ". side main .";
+    ". side main ."
+    ". side hobbies .";
 
     align-content: center;
     padding: 0.5rem;
@@ -51,12 +52,20 @@ body { background-color: var(--bg);}
 .sidebar {
     grid-area: side;
     
-    font-size: 1.25vw; 
+    font-size: 1vw; 
 }
 
-.main {
+.intro {
     grid-area: main;
-    padding: 30px;
+}
+
+#hobbies {
+    grid-area: hobbies;
+}
+
+.main{
+    padding: 2rem;
+    font-size: 18px;
 }
 
 @media screen and (max-width: 900px){
@@ -66,7 +75,8 @@ body { background-color: var(--bg);}
         grid-template-areas: 
         "title"
         "side"
-        "main";
+        "main"
+        "hobbies";
     }
 
     .titlebar {
@@ -86,7 +96,11 @@ body { background-color: var(--bg);}
     visibility: hidden;
 }
 
-p, h1, h2, h3, div, a{
+.subitem {
+    display: none;
+}
+
+p, h1, h2, h3, div, a, ul{
     font-family: Krypton;
     font-weight: normal;
     color: var(--text)
@@ -95,10 +109,6 @@ p, h1, h2, h3, div, a{
 hr {
     border-color: var(--text);
     border-style: dashed;
-}
-
-div {
-    font-size: 18px;
 }
 
 .box > img {
