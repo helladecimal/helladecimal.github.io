@@ -100,11 +100,11 @@ body { background-color: var(--bg);}
     padding: 0;
     cursor: pointer;
     opacity: 0;
-    appearance: none;
+    position: absolute;
 }
 
-.folder:checked{
-    content: "a";
+.folder:checked ~ .subitem{
+    display: none;
 }
 
 .spacer {
