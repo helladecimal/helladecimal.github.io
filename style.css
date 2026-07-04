@@ -22,11 +22,13 @@ body { background-color: var(--bg);}
 .container {
     
     display: grid;
-    grid-template-columns: auto 15% 40% auto;
+    grid-template-columns: auto 12% 40% auto;
     grid-template-areas: 
     ". . title ."
     ". side main ."
-    ". side hobbies .";
+    ". side hobbies ."
+    ". footer footer ."
+    ". buttons buttons .";
 
     align-content: center;
     padding: 0.5rem;
@@ -63,6 +65,17 @@ body { background-color: var(--bg);}
     grid-area: hobbies;
 }
 
+#buttonrow {
+    grid-area: buttons;
+}
+
+.footer {
+    grid-area: footer;
+    padding: 0.5rem;
+    background-color: var(--fg2);
+    opacity: 0.35;
+}
+
 .main{
     padding: 2rem;
     font-size: 18px;
@@ -76,7 +89,9 @@ body { background-color: var(--bg);}
         "title"
         "side"
         "main"
-        "hobbies";
+        "hobbies"
+        "footer"
+        "buttons";
     }
 
     .titlebar {
