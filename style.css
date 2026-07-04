@@ -98,13 +98,18 @@ body { background-color: var(--bg);}
     border: 0;
     font-size: 15px;
     padding: 0;
-    cursor: pointer;
     opacity: 0;
     position: absolute;
+    left: -100vw;
+    /* hacky hacky*/
+}
+
+.folder ~ label:hover{
+    cursor: pointer;
 }
 
 .folder:checked ~ .subitem{
-    display: none;
+    display:flex;
 }
 
 .spacer {
@@ -112,11 +117,11 @@ body { background-color: var(--bg);}
 }
 
 .subitem {
-    display: auto;
+    display: none;
 }
 
 .subitem > span {
-    margin-left: 1.5ch;
+    margin-left: 2.5ch;
 }
 
 .context {
