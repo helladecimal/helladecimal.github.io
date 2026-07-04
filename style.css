@@ -99,6 +99,12 @@ body { background-color: var(--bg);}
     font-size: 15px;
     padding: 0;
     cursor: pointer;
+    opacity: 0;
+    appearance: none;
+}
+
+.folder:checked{
+    content: "a";
 }
 
 .spacer {
