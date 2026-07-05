@@ -22,7 +22,7 @@ body { background-color: var(--bg);}
 .container {
     
     display: grid;
-    grid-template-columns: auto 12% 40% auto;
+    grid-template-columns: auto 15% 40% auto;
 
     
     grid-template-areas: 
