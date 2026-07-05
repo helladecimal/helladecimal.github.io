@@ -2,7 +2,7 @@
     --bg: #0F0F0D;
     --fg: #48513C;
     --fg2: #222818;
-    --text: #D3D3AD
+    --text: #D3D3AD;
 }
 
 @font-face {
@@ -23,12 +23,15 @@ body { background-color: var(--bg);}
     
     display: grid;
     grid-template-columns: auto 12% 40% auto;
+
+    
     grid-template-areas: 
     ". . title ."
-    ". side main ."
-    ". side hobbies ."
+    ". side box1 ."
+    ". side box2 ."
     ". footer footer ."
     ". buttons buttons .";
+    
 
     align-content: center;
     padding: 0.5rem;
@@ -57,19 +60,22 @@ iframe {
     align-items: center;
 }
 
+
 .sidebar {
     grid-area: side;
-    
     font-size: 1vw; 
 }
 
-.intro {
-    grid-area: main;
+
+.box1 {
+    grid-area: box1;
 }
 
-.hobbies {
-    grid-area: hobbies;
+.box2 {
+    grid-area: box2;
 }
+
+
 
 #buttonrow {
     grid-area: buttons;
@@ -106,8 +112,10 @@ iframe {
         grid-template-areas: 
         "title"
         "side"
-        "main"
-        "hobbies"
+        "box1"
+        "box2"
+        "box3"
+        "box4"
         "footer"
         "buttons";
     }
