@@ -86,6 +86,23 @@ iframe {
     grid-area: buttons;
 }
 
+img:not(#pfp) {
+    border: 10px solid var(--bg);
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    background-color: var(--bg);
+    object-fit: contain;
+    margin-bottom: 1ch;
+}
+
+.gallery {
+    display: grid;
+    align-items: center;
+    column-gap: 5%;
+    grid-template-columns: 1fr 1fr;
+}
+
 .code {
     border: 5px solid var(--fg);
     background-color: var(--bg);
@@ -192,6 +209,10 @@ p, h1, h2, h3, div, a, ul{
 hr {
     border-color: var(--text);
     border-style: dashed;
+
+    &.mini{
+        width: 80%;
+    }
 }
 
 .box > img {
