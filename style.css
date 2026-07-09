@@ -193,8 +193,12 @@ iframe {
     display: in;
 }*/
 
-.subitem > span {
-    margin-left: 2.5ch;
+.folder > * {
+    margin-left: 1.5ch;
+}
+
+.bracket {
+    margin-left: 0.5ch;
 }
 
 .context {
