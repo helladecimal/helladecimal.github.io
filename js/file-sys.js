@@ -41,10 +41,11 @@ folders.forEach(function(folder){
 
 files.forEach(function(file){
     file.prepend(fileIcon.cloneNode(true));
-
+    
     if (file !== file.parentElement.lastElementChild){
         file.prepend(bracket.cloneNode(true));
     } else {
         file.prepend(endBracket.cloneNode(true));
     }
+
 });

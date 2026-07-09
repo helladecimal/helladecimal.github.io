@@ -192,12 +192,12 @@ iframe {
 /*.subitem {
     display: in;
 }*/
-.folder > div {
-    margin-left: 3.5ch;
+.folder > .folder > div {
+    padding-left: 3.5ch;
 }
 
-.bracket {
-    margin-left: -3ch;
+.folder {
+    padding-left: 0.5ch;
 }
 
 .context {
