@@ -181,9 +181,6 @@ iframe {
     user-select: none;
 }
 
-.folder:checked ~ .subitem{
-    display:flex;
-}
 
 .spacer {
     visibility: hidden;
@@ -192,12 +189,10 @@ iframe {
 /*.subitem {
     display: in;
 }*/
-.folder > .folder > div {
-    padding-left: 3.5ch;
-}
 
-.folder {
-    padding-left: 0.5ch;
+
+.pipe {
+    position: relative;
 }
 
 .context {
