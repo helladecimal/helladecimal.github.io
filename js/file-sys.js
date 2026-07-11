@@ -38,7 +38,9 @@ function displayChildren(item){
         } else {
             folderChild.item(i).style.display = "none";
         }
-    } 
+    }
+    
+    window.parent.iframe();
 }
 
 folders.forEach(function(folder){
