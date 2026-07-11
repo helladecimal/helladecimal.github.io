@@ -5,7 +5,7 @@
 
 let folderIcon = document.createElement("span");
 folderIcon.innerHTML = "";
-folderIcon.className = "nerd";
+folderIcon.classList.add("nerd", "fold-icon");
 
 let fileIcon = document.createElement("span");
 fileIcon.innerHTML = "";
@@ -29,8 +29,27 @@ let files = document.querySelectorAll(".file");
 
 let items = document.querySelectorAll(".file, .folder");
 
+function displayChildren(item){
+    let display = item.getAttribute("data-toggle");
+    let folderChild = item.querySelectorAll(":scope > div");
+    for (let i=0; i < folderChild.length; i++){
+        if (display == "true"){
+            folderChild.item(i).style.display = "block";
+        } else {
+            folderChild.item(i).style.display = "none";
+        }
+    } 
+}
+
 folders.forEach(function(folder){
-    folder.prepend(folderIcon.cloneNode(true));
+    folder.setAttribute("data-toggle", "false");
+   
+    if (folder.id !== "root"){
+        displayChildren(folder);
+    }
+
+    let localicon = folderIcon.cloneNode(true);
+    folder.prepend(localicon);
 
     if (folder.id !== "root"){
         if (folder !== folder.parentElement.lastElementChild){
@@ -38,7 +57,16 @@ folders.forEach(function(folder){
         } else {
             folder.prepend(endBracket.cloneNode(true));
         }
+
     }
+
+    localicon.addEventListener("mousedown", function(e){
+        e.stopPropagation();
+        console.log(folder.innerText);
+        let folderChild = folder.querySelectorAll("div");
+        folder.getAttribute("data-toggle") == "false" ? folder.setAttribute("data-toggle", "true") : folder.setAttribute("data-toggle", "false")
+        displayChildren(folder);
+    });
 });
 
 files.forEach(function(file){
@@ -55,22 +83,25 @@ files.forEach(function(file){
 items.forEach(function(item){
     let depth = 0;
     let parent = item.parentElement;
+    let ancestors = [];
 
     while (parent && parent.id !== "root" && item.id !== "root"){
+        ancestors.push(parent);
         depth++;
         parent = parent.parentElement;
     }
+
 
     if (depth > 0){
         for (let i=depth; i > 0; i--){ 
             let localPipe = pipe.cloneNode(true);
 
-            if (item.parentElement === item.parentElement.parentElement.lastElementChild && i > 1 ){
+            if (ancestors[depth-i].nextElementSibling == null){
                 localPipe.style.visibility = "hidden";
             }
 
             item.prepend(localPipe);
-            localPipe.style.right = 2.5*(depth/i) + "ch"; // OH MY GODDDD FINALLY
+            localPipe.style.right = 2.5*(depth-i+1) + "ch"; // OH MY GODDDD FINALLY
         };
     };
 });

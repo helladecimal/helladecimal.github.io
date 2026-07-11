@@ -192,7 +192,7 @@ iframe {
 }
 
 
-.folder ~ label:hover{
+.fold-icon:hover{
     cursor: pointer;
     user-select: none;
 }
