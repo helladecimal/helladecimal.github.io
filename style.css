@@ -59,6 +59,11 @@ iframe {
     align-items: center;
 }
 
+.note {
+    font-size: small;
+    opacity: 0.8;
+}
+
 
 .sidebar {
     grid-area: side;
