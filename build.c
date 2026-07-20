@@ -1,15 +1,20 @@
 #include <stdio.h>
+#include <string.h>
 
 int main(void)
 {
-
-    FILE *test = fopen("./blog/md/test.md", "r");
-
+    FILE *test;
     char buffer[256];
 
-    fgets(buffer, 256, test);
+    struct Identifier {
+        char* md;
+        char* html;
+    }
 
-    printf(buffer);
+    test = fopen("blog/md/test.md", "r");
 
+    while (fgets(buffer, 256, test)){
+        printf("%s", buffer);
+    }
     fclose(test);
 }
