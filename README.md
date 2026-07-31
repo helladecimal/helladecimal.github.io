@@ -4,4 +4,4 @@ This site includes:
 - My hardware specs
 - my contacts
 - my project
-- a blog (WIP)
+- a blog
