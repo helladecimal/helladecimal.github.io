@@ -3,5 +3,5 @@ This site includes:
 - Basic info about me
 - My hardware specs
 - my contacts
-- my project
+- a list of my projects
 - a blog
