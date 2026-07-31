@@ -59,6 +59,14 @@ iframe {
     align-items: center;
 }
 
+.title-box {
+    padding-top: -5px;
+    padding-bottom: -5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .note {
     font-size: small;
     opacity: 0.8;
