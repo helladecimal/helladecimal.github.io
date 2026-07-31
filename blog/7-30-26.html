@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>heckadecimal - blog</title>
+
+    <meta content="heckadecimal - blog" property="og:title"/>
+    <meta content="why'd the blog take so long?" property="og:description"/>
+    <meta content="https://helladecimal.github.io" property="og:url"/>
+    <meta content="https://helladecimal.github.io/img/embed.png" property="og:image"/>
+    <meta property="og:image:width" content="1200"/>
+    <meta property="og:image:height" content="630"/>
+    <meta content="#48513C" data-react-helmet="true" name="theme-color"/>
+</head>
+<body>
+    <div class="container">
+
+        <div class="box titlebar">
+            
+            <img class="box" src="/img/pfp.jpg" height="100px" id="pfp">
+            <h1>heckadecimal</h1>
+        </div>
+
+        
+
+        <div class="sidebar box" scrolling="no">
+            <iframe id="bar-frame" src="/other/file-sys.html"></iframe>
+            <script src="/js/sidebar.js"></script>
+        </div>
+        
+        
+        <div class="content">
+            <div class="box title-box">
+                <h1>why'd the blog take so long?</h1>
+                <i>7/30/2026</i>
+            </div>
+            <div class="box">
+                <p>
+                    I was exploring on <a href="https://webtiles.kicya.net/">WebTiles</a>, as one does, and I saw something that caught my eye... 
+                </p>
+                <a href="https://webtiles.kicya.net/#plurality-zine.nekoweb.org">
+                    <img src="/img/blog/exist.png">
+                </a>
+                <p>
+                    And that's when it hit me.
+                </p>
+                <p>
+                    It's been 3 weeks since my site's been updated publicly.
+                </p>
+                <p>
+                    The reason why is that I spent 2 weeks trying to figure out how to write a <a href="https://en.wikipedia.org/wiki/Static_site_generator">static site generator</a> in C before giving up.
+                </p>
+                <p>
+                    Honestly sounds like a pretty dumb idea, but I was confident in it working, I even outlined the whole thing in <a href="https://en.wikipedia.org/wiki/Org-mode">org-mode</a> with Doom Emacs! <span style="font-size: 10px;">(which i also need to talk about...)</span></p>
+                </p>
+                <hr>
+                <h2>the process</h2>
+                <p>
+                    The plan was to take in Markdown files, do string shenanigans, and spit out HTML to be added onto the blog. After I started, I realized that dealing with strings and file i/o in C was really hard, and frustrated me. Maybe I just wasn't locked in though.
+                </p>
+                <hr>
+                <h2>more stuff soon?</h2>
+                <p>
+                    Obviously. The blog was really the last part of the site I was trying to finish, but I was so stuck up on having it parse Markdown instead of just writing it in HTML.
+                </p>
+                <br>
+                <img src="/img/blog/html.png">
+                <p class="center" style="font-size: 12px;">(i should've listened...)</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <i>greets to: fr3tsy | nicepotato | toco </i>
+        </div>
+
+        <div id="buttonrow">
+            <!-- this will be for 88x31 buttons -->
+        </div>
+        
+    </div>
+</body>
+</html>
