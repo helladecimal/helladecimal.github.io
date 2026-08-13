@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>heckadecimal - blog</title>
+
+    <meta content="heckadecimal - blog" property="og:title"/>
+    <meta content="my self-hosting journey" property="og:description"/>
+    <meta content="https://helladecimal.github.io" property="og:url"/>
+    <meta content="https://helladecimal.github.io/img/embed.png" property="og:image"/>
+    <meta property="og:image:width" content="1200"/>
+    <meta property="og:image:height" content="630"/>
+    <meta content="#48513C" data-react-helmet="true" name="theme-color"/>
+</head>
+<body>
+    <div class="container">
+
+        <div class="box titlebar">
+            
+            <img class="box" src="/img/pfp.jpg" height="100px" id="pfp">
+            <h1>heckadecimal</h1>
+        </div>
+
+        
+
+        <div class="sidebar box" scrolling="no">
+            <iframe id="bar-frame" src="/other/file-sys.html"></iframe>
+            <script src="/js/sidebar.js"></script>
+        </div>
+        
+        
+        <div class="content">
+            <div class="box title-box">
+                <h1>my self-hosting journey</h1>
+                <i>8/12/2026</i>
+            </div>
+            <div class="box">
+                <p>
+                    a lot has happened in the past 2 weeks since my blog post, 
+                    the major one being that i'm back in school... (as a senior!)
+                </p> 
+
+                <p>
+                    obviously, more school time correlates to less website dev time, 
+                    so that's why i haven't updated the site.
+                </p>
+
+                <p>
+                    i do have some really exciting and important news though: i bought a domain, and my self-hosted site is now live!!!
+                </p>
+
+                <img src="/img/blog/domain.png">
+
+                <p>
+                    since i participated in 
+                    <a href="https://stardance.hackclub.com">Hack Club's Stardance</a>, 
+                    i was able to get a grant for a domain that i could use. 
+                    (it was one of the reasons why i made this site!)
+                </p>
+
+                <hr>
+                
+                <h2>why?</h2>
+
+                <p>
+                    hosting a server costs money... i don't want to pay for that... 
+                    <span style="font-size: x-small;">(well... if i had a job...)</span>
+                </p>
+
+                <p>
+                    self-hosting and home-labbing have also seem appealing to me.
+                </p>
+
+                <hr>
+
+                <h2>the process</h2>
+
+                <p>
+                    after some advice from friends, i decided to use nginx as my webserver and Cloudflare as my reverse proxy (so i'm not just hosting it straight from my network).
+                </p>
+
+                <p>
+                    for my server, i used that old 
+                    <a href="/hardware#mac">macbook</a>
+                    i had.
+                    i considered using FreeBSD, but it wasn't detecting my network card. so i decided to switch to my original choice, Alpine Linux.
+                </p>
+
+                <div class="gallery center">
+                    <img src="/img/blog/evolution1.png">
+                    <img src="/img/blog/evolution2.png">
+                    <img src="/img/blog/evolution3.png">
+                    <img src="/img/blog/evolution4.png">
+                </div>
+
+                <span style="font-size: small;">1: first nginx post | 2: site with no css | 3: full site being hosted locally | 4: full site being hosted on domain</span>
+
+                <hr>
+                <h2>what will happen to the github page?</h2>
+                <p>
+                    for the most part, nothing. 
+                </p>
+                <p>   
+                    if my server ever goes down, i'll use it as a fallback.
+                </p>
+
+                <hr>
+                <h2>where site?</h2>
+                <p>
+                    stable (soon): <a href="https://heckadecimal.dev">heckadecimal.dev</a>
+                </p>
+
+                <p>
+                    unstable: <a href="https://server-test.heckadecimal.dev">server-test.heckadecimal.dev</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <i>greets to: fr3tsy | nicepotato | toco </i>
+        </div>
+
+        <div id="buttonrow">
+            <!-- this will be for 88x31 buttons -->
+        </div>
+        
+    </div>
+</body>
+</html>
