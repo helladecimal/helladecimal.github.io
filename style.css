@@ -98,35 +98,16 @@ iframe {
 
 #buttonrow {
     grid-area: buttons;
+    margin: -0.5em;
 }
 
-img:not(#pfp) img:not(.buttons) {
+img:not(#pfp, .buttons) { 
     border: 10px solid var(--bg);
     box-sizing: border-box;
     width: 100%;
-    height: auto;
     background-color: var(--bg);
-    object-fit: contain;
+    object-fit: cover;
     margin-bottom: 1ch;
-}
-
-
-
-.buttons {
-    display: flex;
-    gap: 5px;
-    justify-content: center;
-}
-
-.buttons ~ img {
-    border: 0px solid transparent;
-    width: 88px;
-    height: 31px;
-    image-rendering: pixelated;
-}
-
-#hecka {
-   background-color: #0F0F0D;
 }
 
 .gallery {
@@ -135,6 +116,26 @@ img:not(#pfp) img:not(.buttons) {
     column-gap: 5%;
     grid-template-columns: 1fr 1fr;
 }
+
+div.buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+img.buttons {
+    width: 88px;
+    height: 31px;
+
+    image-rendering: pixelated;
+}
+
+
+#hecka {
+   background-color: #0F0F0D;
+}
+
+
 
 .code {
     border: 5px solid var(--fg);
