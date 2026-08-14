@@ -95,11 +95,12 @@ iframe {
 */
 
 
+
 #buttonrow {
     grid-area: buttons;
 }
 
-img:not(#pfp) {
+img:not(#pfp) img:not(.buttons) {
     border: 10px solid var(--bg);
     box-sizing: border-box;
     width: 100%;
@@ -107,6 +108,25 @@ img:not(#pfp) {
     background-color: var(--bg);
     object-fit: contain;
     margin-bottom: 1ch;
+}
+
+
+
+.buttons {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+}
+
+.buttons ~ img {
+    border: 0px solid transparent;
+    width: 88px;
+    height: 31px;
+    image-rendering: pixelated;
+}
+
+#hecka {
+   background-color: #0F0F0D;
 }
 
 .gallery {
