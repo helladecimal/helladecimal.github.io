@@ -101,7 +101,7 @@ iframe {
     margin: -0.5em;
 }
 
-img:not(#pfp, .buttons) { 
+img:not(#pfp, img.buttons) { 
     border: 10px solid var(--bg);
     box-sizing: border-box;
     width: 100%;
