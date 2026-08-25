@@ -75,7 +75,13 @@ iframe {
 
 .sidebar {
     grid-area: side;
-    font-size: 1vw; 
+    font-size: 1vw;
+}
+
+.sidebar.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .content {
