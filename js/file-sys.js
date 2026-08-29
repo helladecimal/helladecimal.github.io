@@ -53,6 +53,8 @@ folders.forEach(function(folder){
     let localicon = folderIcon.cloneNode(true);
     folder.prepend(localicon);
 
+    let textlink = folder.querySelector(".openable"); 
+
     if (folder.id !== "root"){
         if (folder !== folder.parentElement.lastElementChild){
             folder.prepend(bracket.cloneNode(true));
@@ -69,6 +71,15 @@ folders.forEach(function(folder){
         folder.getAttribute("data-toggle") == "false" ? folder.setAttribute("data-toggle", "true") : folder.setAttribute("data-toggle", "false")
         displayChildren(folder);
     });
+
+    if (textlink !== null){
+        textlink.style.cursor = "pointer";
+        textlink.addEventListener("mousedown", function(e){
+            e.stopPropagation();
+            folder.getAttribute("data-toggle") == "false" ? folder.setAttribute("data-toggle", "true") : folder.setAttribute("data-toggle", "false")
+            displayChildren(folder);
+        });
+    }
 });
 
 files.forEach(function(file){
