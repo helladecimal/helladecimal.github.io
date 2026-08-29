@@ -68,8 +68,11 @@ folders.forEach(function(folder){
         e.stopPropagation();
         console.log(folder.innerText);
         let folderChild = folder.querySelectorAll("div");
-        folder.getAttribute("data-toggle") == "false" ? folder.setAttribute("data-toggle", "true") : folder.setAttribute("data-toggle", "false")
-        displayChildren(folder);
+
+        if (folder.id !== "root"){
+            folder.getAttribute("data-toggle") == "false" ? folder.setAttribute("data-toggle", "true") : folder.setAttribute("data-toggle", "false")
+            displayChildren(folder);
+        }
     });
 
     if (textlink !== null){
